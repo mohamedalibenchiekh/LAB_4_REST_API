@@ -1,0 +1,23 @@
+{
+ "name": "lab-3-express-server",
+ "version": "1.0.0",
+ "description": "Learning Express.js and web servers",
+ "type": "module",
+ "main": "server.js",
+ "scripts": {
+  "start": "node server.js",
+  "dev": "node --watch server.js"
+ },
+ "keywords": [
+  "express",
+  "nodejs",
+  "webserver"
+ ],
+ "author": "Mohamed Ali Ben Chiekh",
+ "license": "MIT",
+ "dependencies": {
+  "express": "^5.0.0",
+  "swagger-jsdoc": "^6.2.8",
+  "swagger-ui-express": "^5.0.1"
+ }
+}
