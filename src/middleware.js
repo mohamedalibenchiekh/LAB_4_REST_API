@@ -53,7 +53,7 @@ export const measureTime = (req, res, next) => {
  next();
 };
 // Error handling middleware
-export const errorHandler = (err, req, res, next) => {
+export const errorHandler = (err, req, res, _next) => {
  console.error("❌ ERROR:", err.message);
 
  res.status(err.status || 500).json({

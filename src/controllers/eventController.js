@@ -3,7 +3,6 @@
 import Event from "../models/Event.js";
 import ApiResponse from "../utils/apiResponse.js";
 import ValidationService from "../services/validationService.js";
-import { API_BASE } from '../src/constants/rest.js';
 export class EventController {
  // GET all events (with filtering & pagination)
  static getAllEvents(req, res) {
@@ -34,7 +33,7 @@ req.query;
  `Retrieved ${result.items.length} events`
  )
  );
- } catch (error) {
+  } catch (_error) {
  res.status(500).json(
  ApiResponse.error("Internal server error", 500)
  );
@@ -59,7 +58,7 @@ req.query;
  res.status(200).json(
  ApiResponse.success(event, "Event retrieved successfully")
  );
- } catch (error) {
+  } catch (_error) {
  res.status(500).json(
  ApiResponse.error("Internal server error", 500)
  );
@@ -93,7 +92,7 @@ req.query;
  res.status(201).json(
  ApiResponse.created(newEvent, "Event created successfully")
  );
- } catch (error) {
+  } catch (_error) {
  res.status(500).json(
  ApiResponse.error("Internal server error", 500)
  );
@@ -127,7 +126,7 @@ req.query;
  res.status(200).json(
  ApiResponse.success(updated, "Event updated successfully")
  );
- } catch (error) {
+  } catch (_error) {
  res.status(500).json(
  ApiResponse.error("Internal server error", 500)
  );
@@ -151,7 +150,7 @@ req.query;
  );
  }
  res.status(204).send(); // No content
- } catch (error) {
+  } catch (_error) {
  res.status(500).json(
  ApiResponse.error("Internal server error", 500)
  );
@@ -177,7 +176,7 @@ req.query;
  res.status(200).json(
  ApiResponse.success(stats, "Statistics retrieved successfully")
  );
- } catch (error) {
+  } catch (_error) {
  res.status(500).json(
  ApiResponse.error("Internal server error", 500)
  );
